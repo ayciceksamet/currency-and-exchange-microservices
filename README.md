@@ -21,8 +21,7 @@
 
 ## Introduction
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e91606af4a364076a7058c5ea1c006a8)](https://www.codacy.com/app/joneubank/microservice-template-java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=overture-stack/microservice-template-java&amp;utm_campaign=Badge_Grade)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)]
 
 This microservices are created to achieve retrieving current rates from service provider and calculate the amount of currency, also saving to values memory database.
 
