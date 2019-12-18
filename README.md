@@ -23,35 +23,26 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e91606af4a364076a7058c5ea1c006a8)](https://www.codacy.com/app/joneubank/microservice-template-java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=overture-stack/microservice-template-java&amp;utm_campaign=Badge_Grade)
-[![CircleCI](https://circleci.com/gh/overture-stack/microservice-template-java/tree/master.svg?style=shield)](https://circleci.com/gh/overture-stack/microservice-template-java/tree/master)
 
-TODO: Replace with introduction
+This microservices are created to achieve retrieving current rates from service provider and calculate the amount of currency, also saving to values memory database.
+
 
 ## Features
-TODO: Description of features
 
 * Include a list of
-* all the many beautiful
-* web server features
+* Netflix Zuul API GateWay 
+* Currency Microservice
+* Exchange Microservice
 
 
-## Requirements
-The application can be run locally or in a docker container, the requirements for each setup are listed below.
-
-
-### EGO
-A running instance of [EGO](https://github.com/overture-stack/ego/) is required to generate the Authorization tokens and to provide the verification key.
-
-[EGO](https://github.com/overture-stack/ego/) can be cloned and run locally if no public server is available. 
 
 
 ### Local
 * [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Maven](https://maven.apache.org/download.cgi)
-
-
-### Docker
-* [Docker](https://www.docker.com/get-docker)
+* Spring Boot
+* Netflix Zuul API GATEWAY
+* Mockito for REST API Testing
 
 
 ## Quick Start
