@@ -1,4 +1,4 @@
-# Currency Service
+
 <h1 align="center"> Currency Service </h1> <br>
 
 <p align="center">
