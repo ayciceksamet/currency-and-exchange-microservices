@@ -1,0 +1,9 @@
+package com.codeshare.springboot.microservice.example.conversion.restservice;
+
+import com.codeshare.springboot.microservice.example.conversion.model.CCConvertionAmountResponseModel;
+
+public interface ICCRestService {
+
+	CCConvertionAmountResponseModel getCCAmount(String amount, String from, String to);
+	
+}

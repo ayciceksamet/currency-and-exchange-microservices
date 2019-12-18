@@ -1,0 +1,64 @@
+package com.codeshare.springboot.microservice.example.exchangerate;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
+import org.springframework.mock.web.MockHttpServletRequest;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import com.codeshare.springboot.microservice.example.exchangerate.controller.ERController;
+import com.codeshare.springboot.microservice.example.exchangerate.implemantation.ERRestServiceImpl;
+import com.codeshare.springboot.microservice.example.exchangerate.implemantation.IERRestService;
+import com.codeshare.springboot.microservice.example.exchangerate.model.ERConvertionRateResponseModel;
+import com.codeshare.springboot.microservice.example.exchangerate.model.ERModel;
+
+@SpringBootTest
+@ExtendWith(MockitoExtension.class)
+@RunWith(MockitoJUnitRunner.class)
+public class ERControllerTest 
+{
+    @InjectMocks
+    ERController ercontroller;
+    
+     
+    @Mock
+    ERModel ermodel;
+    
+    @Mock
+    IERRestService execution;
+    
+    @Mock
+    ERRestServiceImpl serviceImpl;
+     
+    @Before
+    public void setup() {
+        MockitoAnnotations.initMocks(this);
+    }
+    
+    @Test
+    public void testERService() 
+    {
+        MockHttpServletRequest request = new MockHttpServletRequest();
+        RequestContextHolder.setRequestAttributes(new ServletRequestAttributes(request));
+         
+
+        ResponseEntity<ERConvertionRateResponseModel> responseEntity = ercontroller.getRate("USDTRY", request);
+         
+        assertThat(responseEntity.getStatusCodeValue()).isEqualTo(200);
+    }
+     
+    
+}

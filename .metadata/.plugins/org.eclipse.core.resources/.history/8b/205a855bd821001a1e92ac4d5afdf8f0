@@ -1,0 +1,5 @@
+server.port = 8082
+spring.application.name = api-gateway
+# routing for service 1
+zuul.routes.service_1.path = /api-service/**
+zuul.routes.service_1.url = http://localhost:8090/exchangrate/

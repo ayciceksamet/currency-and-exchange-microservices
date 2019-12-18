@@ -1,0 +1,13 @@
+package com.codeshare.springboot.microservice.example.exchangerate.model;
+
+public class ERRequestModel {
+	
+    private Currency srcCurrency;
+	
+	private Currency tgtCurrency;
+	
+	private BigDecimal srcAmount;
+	
+	private BigDecimal tgtAmount;
+
+}

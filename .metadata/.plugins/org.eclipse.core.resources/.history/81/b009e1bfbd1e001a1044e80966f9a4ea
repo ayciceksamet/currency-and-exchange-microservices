@@ -1,0 +1,9 @@
+package com.codeshare.springboot.microservice.example.exchangerate.implemantation;
+
+import com.codeshare.springboot.microservice.example.exchangerate.model.ERConvertionRateResponseModel;
+
+public interface IERExecution {
+	
+	public ERConvertionRateResponseModel getExchangeRate(String object);
+
+}

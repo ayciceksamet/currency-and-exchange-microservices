@@ -1,0 +1,23 @@
+package com.codeshare.springboot.microservice.example.exchangerate.model;
+
+import java.math.BigDecimal;
+
+public class ERConvertionRateResponseModel {
+	
+	private String exchangeRateValue;
+	private ERErrorModel error;
+	
+	public String getConvertedValue() {
+		return exchangeRateValue;
+	}
+	public void setConvertedValue(String exchangeRateValue) {
+		this.exchangeRateValue = exchangeRateValue;
+	}
+	public ERErrorModel getError() {
+		return error;
+	}
+	public void setError(ERErrorModel error) {
+		this.error = error;
+	}
+
+}

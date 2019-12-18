@@ -1,0 +1,53 @@
+package com.codeshare.springboot.microservice.example.conversion.repository;
+
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+
+import com.codeshare.springboot.microservice.example.conversion.model.CCConvertionAmountResponseModel;
+@Repository
+public class CCRepository {
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+    class StudentRowMapper implements RowMapper < CCConvertionAmountResponseModel > {
+        @Override
+        public CCConvertionAmountResponseModel mapRow(ResultSet rs, int rowNum) throws SQLException {
+        	CCConvertionAmountResponseModel model = new CCConvertionAmountResponseModel();
+        	model.setAmountValue(rs.getBigDecimal("amount"));
+        	model.setTransactionID(rs.getString("transactionid"));
+            return model;
+        }
+    }
+    public List < CCConvertionAmountResponseModel > findAll() {
+        return jdbcTemplate.query("select * from conversion", new StudentRowMapper());
+    }
+    public CCConvertionAmountResponseModel findById(long id) {
+        return jdbcTemplate.queryForObject("select * from conversion where id=?", new Object[] {
+                id
+            },
+            new BeanPropertyRowMapper < CCConvertionAmountResponseModel > (CCConvertionAmountResponseModel.class));
+    }
+    public int deleteById(long id) {
+        return jdbcTemplate.update("delete from conversion where id=?", new Object[] {
+            id
+        });
+    }
+    public int insert(CCConvertionAmountResponseModel model) {
+        return jdbcTemplate.update("insert into conversion (id, name) " + "values(?,  ?, ?)",
+            new Object[] {
+            		model.getId(), model.getName(), model.getPassportNumber()
+            });
+    }
+    public int update(CCConvertionAmountResponseModel model) {
+        return jdbcTemplate.update("update student " + " set name = ?, passport_number = ? " + " where id = ?",
+            new Object[] {
+            		model.getName(), model.getPassportNumber(), model.getId()
+            });
+    }
+}

@@ -1,0 +1,13 @@
+package com.codeshare.springboot.microservice.example.conversion.model;
+
+public class CCConvertionAmountResponseModel {
+	
+	
+
+	public Object getError() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

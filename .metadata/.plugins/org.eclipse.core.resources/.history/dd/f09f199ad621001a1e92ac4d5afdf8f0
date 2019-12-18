@@ -1,0 +1,48 @@
+package com.codeshare.springboot.microservice.example.apigateway.logging;
+
+@Component
+@Profile("recording")
+public class LogRequestFilter extends ZuulFilter {
+    privatestatic Logger log = LoggerFactory.getLogger(LogRequestFilter.class);
+    @Value("${recording.file:c:/temp/record.txt}")
+    private String recordFile;
+    @Override
+    public String filterType() {
+        return "pre";
+    }
+    @Override
+    publicint filterOrder() {
+        return 2;
+    }
+    @Override
+    publicboolean shouldFilter() {
+        return true;
+    }
+    @Override
+    public Object run() {
+        RequestContext ctx = RequestContext.getCurrentContext();
+        HttpServletRequest request = new HttpServletRequestWrapper(ctx.getRequest());
+        String requestData = null;
+        try {
+            if (request.getContentLength() > 0) {
+                requestData = CharStreams.toString(request.getReader());
+            }
+        } catch (Exception e) {
+            log.error("Error parsing request", e);
+            throw e;
+        }
+        try {
+            String line = String.format("Request, %s, %s,%s,%s \r\n",
+                getContext().getGlobalId(), request.getRequestURL(),
+                request.getMethod(), requestData);
+            BufferedWriter bw = Files.newBufferedWriter(Paths.get(recordFile),
+                Charset.forName("UTF-8"), StandardOpenOption.APPEND);
+            bw.write(line);
+            bw.close();
+        } catch (IOException e) {
+            log.error("Error writing request", e);
+            throw e;
+        }
+        returnnull;
+    }
+}

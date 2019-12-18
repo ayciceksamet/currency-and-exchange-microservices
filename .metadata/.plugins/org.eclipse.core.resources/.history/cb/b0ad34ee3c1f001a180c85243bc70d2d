@@ -1,0 +1,7 @@
+spring.main.banner-mode=off
+spring.thymeleaf.cache=false
+
+er.cache.expiry = 15
+
+api.key=88927ed0c1bfb19d38fa168402e2b67e
+currency.api.base.uri = http://apilayer.net/api/live

@@ -1,0 +1,5 @@
+package com.codeshare.springboot.microservice.example.conversion.restservice;
+
+public class ICCRestService {
+
+}

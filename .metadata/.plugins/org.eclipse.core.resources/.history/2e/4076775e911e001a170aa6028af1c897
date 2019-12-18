@@ -1,0 +1,30 @@
+package com.codeshare.springboot.microservice.example.exchangerate.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.codeshare.springboot.microservice.example.exchangerate.model.ERConvertionRateResponseModel;
+import com.codeshare.springboot.microservice.example.exchangerate.model.ERRequestModel;
+
+public class ERController {
+	
+	@RequestMapping(value = "/exchangerate", method = RequestMethod.POST)
+	public ResponseEntity<ERConvertionRateResponseModel> doConvert(@ModelAttribute ConverterModel cModel, Model model,
+			HttpServletRequest request) {
+
+		HttpStatus status = HttpStatus.OK;
+
+		model.addAttribute("converterModel", cModel);
+
+		ResponseModel rm = converterBP.getConvertedValue(cModel.getSrcCurrency(), cModel.getTgtCurrency(),
+				cModel.getSrcAmount());
+
+		return new ResponseEntity<ERConvertionRateResponseModel>(rm, status);
+	}
+
+}

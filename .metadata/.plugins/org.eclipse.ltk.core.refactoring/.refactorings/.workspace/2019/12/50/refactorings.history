@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;exxhangerate&apos; to &apos;exchangerate&apos;" description="Rename resource &apos;exxhangerate&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/exxhangerate" name="exchangerate" stamp="1576336287063" updateReferences="true"/>
+</session>

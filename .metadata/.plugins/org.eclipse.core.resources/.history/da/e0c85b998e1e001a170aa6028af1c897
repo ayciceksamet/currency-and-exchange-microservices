@@ -1,0 +1,13 @@
+package com.codeshare.springboot.microservice.example.exchangerate.model;
+
+import java.math.BigDecimal;
+
+public class ERRequestModel {
+	
+    private Currency srcCurrency;
+	
+	private Currency tgtCurrency;
+	
+	private BigDecimal conversionRate;
+	
+}

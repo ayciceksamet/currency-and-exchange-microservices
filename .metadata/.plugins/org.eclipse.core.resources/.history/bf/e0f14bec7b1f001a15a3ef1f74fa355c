@@ -1,0 +1,6 @@
+create table conversion
+(
+   id integer not null,
+   amount varchar(255) not null,
+   primary key(id)
+);

@@ -1,0 +1,16 @@
+package com.codeshare.springboot.microservice.example.exchangerate.model;
+
+import java.math.BigDecimal;
+
+public class ERConvertionRateResponseModel {
+	
+	private BigDecimal convertedValue;
+	private ERErrorModel error;
+	public BigDecimal getConvertedValue() {
+		return convertedValue;
+	}
+	public void setConvertedValue(BigDecimal convertedValue) {
+		this.convertedValue = convertedValue;
+	}
+
+}

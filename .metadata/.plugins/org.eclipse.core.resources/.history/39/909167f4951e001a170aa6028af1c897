@@ -1,0 +1,18 @@
+package com.codeshare.springboot.microservice.example.exchangerate.model;
+
+
+public class ERRequestModel {
+	
+    private String srcCurrency;
+	
+
+	public String getSrcCurrency() {
+		return srcCurrency;
+	}
+
+	public void setSrcCurrency(String srcCurrency) {
+		this.srcCurrency = srcCurrency;
+	}
+
+	
+}

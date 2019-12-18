@@ -1,0 +1,35 @@
+1576336594075	Rename type 'ExxhangerateApplication'
+1576337783077	Delete element
+1576338668946	Delete element
+1576338810300	Delete element
+1576339039927	Rename compilation unit 'ERModel.java'
+1576339568146	Delete element
+1576339941763	Encapsulate field 'code'
+1576339945762	Encapsulate field 'type'
+1576339950125	Encapsulate field 'info'
+1576339981885	Encapsulate field 'convertedValue'
+1576339998775	Delete element
+1576341977212	Encapsulate field 'convertedValue'
+1576341981565	Encapsulate field 'error'
+1576343011076	Encapsulate field 'srcCurrency'
+1576343017361	Encapsulate field 'conversionRate'
+1576343147075	Delete element
+1576343193647	Delete element
+1576343299790	Delete element
+1576361090553	Rename type 'IERExecution'
+1576361113732	Rename type 'ExecutionImp'
+1576362277571	Delete element
+1576362334780	Delete element
+1576363194229	Delete element
+1576370487049	Rename type 'ERConversionRatesModel'
+1576370657982	Encapsulate field 'id'
+1576370764579	Encapsulate field 'srcCurrency'
+1576370768224	Encapsulate field 'trgtCurrency'
+1576370771837	Encapsulate field 'sourceAmount'
+1576370774923	Encapsulate field 'totalCalculatedAmount'
+1576370798222	Encapsulate field 'exchangeRate'
+1576413428481	Delete element
+1576414185434	Delete element
+1576414336185	Delete element
+1576438889191	Encapsulate field 'transactionId'
+1576439300091	Encapsulate field 'transactionID'

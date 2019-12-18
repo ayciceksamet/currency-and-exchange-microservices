@@ -1,0 +1,6 @@
+create table conversion
+(
+   transactionid varchar(255) not null,
+   amount DECIMAL(20, 2) not null,
+   primary key(transactionid)
+);

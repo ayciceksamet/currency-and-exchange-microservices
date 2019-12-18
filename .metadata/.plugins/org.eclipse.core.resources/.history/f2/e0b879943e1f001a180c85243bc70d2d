@@ -1,0 +1,33 @@
+package com.codeshare.springboot.microservice.example.conversion.model;
+
+import java.math.BigDecimal;
+
+
+public class CCConvertionAmountResponseModel {
+	
+	
+	private BigDecimal amountConverted;
+	private Long transactionID;
+	private CCErrorModel error;
+	
+	public BigDecimal getRateValue() {
+		return amountConverted;
+	}
+	public void setRateValue(BigDecimal exchangeRateValue) {
+		this.amountConverted = exchangeRateValue;
+	}
+	public CCErrorModel getError() {
+		return error;
+	}
+	public void setError(CCErrorModel error) {
+		this.error = error;
+	}
+	public Long getTransactionID() {
+		return transactionID;
+	}
+	public void setTransactionID(Long transactionID) {
+		this.transactionID = transactionID;
+	}
+
+
+}

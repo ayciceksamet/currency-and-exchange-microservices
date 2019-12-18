@@ -1,0 +1,5 @@
+package com.codeshare.springboot.microservice.example.conversion.model;
+
+public class CCConvertionAmountResponseModel {
+
+}

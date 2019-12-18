@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ERControllerTest" project="exchangerate" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.codeshare.springboot.microservice.example.exchangerate.ERControllerTest" time="1.288">
+    <testcase name="testERService_WithBadCredentials" classname="com.codeshare.springboot.microservice.example.exchangerate.ERControllerTest" time="0.742"/>
+    <testcase name="testERService_WithProperToValueAndNumberResult" classname="com.codeshare.springboot.microservice.example.exchangerate.ERControllerTest" time="0.268"/>
+    <testcase name="testERService_WithMissingCredentials" classname="com.codeshare.springboot.microservice.example.exchangerate.ERControllerTest" time="0.264"/>
+    <testcase name="testERService_WrongURLPathAnd404NotFound" classname="com.codeshare.springboot.microservice.example.exchangerate.ERControllerTest" time="0.009"/>
+    <testcase name="testERService_WithProperExchangeToValue" classname="com.codeshare.springboot.microservice.example.exchangerate.ERControllerTest" time="0.005"/>
+  </testsuite>
+</testrun>

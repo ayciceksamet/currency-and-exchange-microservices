@@ -1,0 +1,5 @@
+package com.codeshare.springboot.microservice.example.exchangerate.constant;
+
+public class Currency {
+
+}
