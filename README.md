@@ -74,7 +74,7 @@ POST https://api-gateway34.herokuapp.com/api/ccservice/conversion/10/USD/TRY
 
 ```bash
 POST https://api-gateway34.herokuapp.com/api/ccservice/conversion/getbyid/3a085772-ff41-4682-ac4c-a95fcb23c05c
-```
+
 [
     {
         "id": -4687967664085091257,
@@ -119,6 +119,7 @@ POST https://api-gateway34.herokuapp.com/api/ccservice/conversion/getbyid/3a0857
         "amountValue": null
     }
 ]
+```
 
 
 ## Testing
