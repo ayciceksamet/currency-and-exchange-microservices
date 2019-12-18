@@ -1,5 +1,5 @@
 
-<h1 align="center"> Currency Service </h1> <br>
+<h1 align="center"> Exchange and Currency Service </h1> <br>
 
 <p align="center">
   Exchange and Currency microservices description.
