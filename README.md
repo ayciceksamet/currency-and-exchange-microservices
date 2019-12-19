@@ -55,6 +55,8 @@ The microservices are deployed to heroku cloud servers based on amazon web servi
 
 ### Run and Test Project on Heroku
 
+Please refresh again if you have any error, so heroku dyno could be sleeped. To activate refresh request.
+
 ```bash
 GET https://api-gateway34.herokuapp.com/api/exservice/exchangerate/USDTRY
 ```
