@@ -32,7 +32,7 @@ This microservices are created to achieve retrieving current rates from service 
 * Netflix Zuul API GateWay 
 * Currency Microservice
 * Exchange Microservice
-* Cache mechanism (implemented to improve performance on each service call)
+* Cache Mechanism (implemented to improve performance on each service call)
 
 ### Local
 * [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
