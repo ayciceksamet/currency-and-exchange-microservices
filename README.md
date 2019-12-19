@@ -32,16 +32,16 @@ This microservices are created to achieve retrieving current rates from service 
 * Netflix Zuul API GateWay 
 * Currency Microservice
 * Exchange Microservice
-
-
-
+* Cache mechanism (implemented to improve performance on each service call)
 
 ### Local
 * [Java 8 SDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Maven](https://maven.apache.org/download.cgi)
 * Spring Boot
+* H2 Memory Database
 * Netflix Zuul API GATEWAY
 * Mockito for REST API Testing
+* Google Guava Cache
 
 
 ## Quick Start
@@ -51,11 +51,26 @@ The microservices are deployed to heroku cloud servers based on amazon web servi
                                                     ==================
                                       Currency Microservice <--> Exchange Microservice
                                       
-            
+- The exchange rate is taken from currencylayer service provider.
+- The each currency service call is stored in H2 memory database.
+- Cached rate is using with limited timeout while calculating amount of currency convertion.
+- Please check the API documentation on swagger for detailed informations.
+  (https://app.swaggerhub.com/apis-docs/ayciceksamet/ExchangeRateAPI/1.0.1)
+
 
 ### Run and Test Project on Heroku
 
 Please refresh again if you have any error, so heroku dyno could be sleeped. To activate refresh request.
+
+Please be sure that the services are idle :
+
+http://api-gateway34.herokuapp.com/api/ccservice/conversion/ping
+
+http://api-gateway34.herokuapp.com/api/exservice/exchange/ping
+
+http://currencyservice34.herokuapp.com/conversion/ping
+
+https://exchangeservice34.herokuapp.com/exchange/ping
 
 ```bash
 GET https://api-gateway34.herokuapp.com/api/exservice/exchangerate/USDTRY
